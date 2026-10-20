@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@200;300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: #ffffff;
+  background-color: #f6f3ee;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+
+.contact-hero {
+  height: 380px;
+  background-image: url(https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-15-1155x615.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 45px 80px;
+  backdrop-filter: blur(3px);
+}
+
+.hero-overlay h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 400;
+  color: #ffff;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.hero-overlay .breadcrumb {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.contact-info-section {
+  padding: 100px 0;
+  background-color: #f6f3ee;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.contact-details .subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c59d74;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contact-details .title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 45px;
+  line-height: 1.15;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.icon-wrapper {
+  font-size: 22px;
+  color: #c59d74;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.card-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.card-content p {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: #888888;
+  font-weight: 300;
+}
+
+.map-container {
+  height: 480px;
+  width: 100%;
+}
+
+
+.contact-form-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.form-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-wrapper h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  background-color: #ded8cd;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #d5cebf;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #7a7670;
+  font-weight: 300;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  background-color: #d5cebf;
+}
+
+.checkbox-group {
+  margin: 15px 0 25px 0;
+  text-align: left;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #666666;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1a1a1a;
+}
+
+.submit-btn {
+  background-color: #a8a39a;
+  color: #ffffff;
+  border: none;
+  padding: 18px 36px;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.submit-btn:hover {
+  background-color: #1a1a1a;
+}
+
+.footer {
+  background-color: #38363b;
+  color: #b8b5ba;
+  padding-top: 80px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-bottom: 70px;
+}
+
+.footer-col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #c59d74;
+  margin-bottom: 25px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #a5a2a8;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #48464c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #c59d74;
+}
+
+.footer-bottom {
+  border-top: 1px solid #454348;
+  padding: 28px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #838087;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map-container {
+    height: 320px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 44px;
+  }
+
+  .contact-details .title,
+  .form-wrapper h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,35 @@
+.photo-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: linear-gradient(160deg, #d8c7bb, #a98f80) center / cover no-repeat;
+}
+.photo-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 60, 110, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.photo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: #f3bfa8;
+  color: #fff;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.photo-link:hover::after { opacity: 1; }
+.photo-link:hover .photo-icon,
+.photo-link:focus-visible .photo-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}

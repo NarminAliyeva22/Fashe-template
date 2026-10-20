@@ -1,0 +1,18 @@
+ .pcard { text-align: center; font-family: "Raleway", sans-serif; color: #2b2a2f; }
+.pimg { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden;
+  background: linear-gradient(160deg, #eee9e4, #d9cfc7) center / contain no-repeat; }
+.pimg::after { content: ""; position: absolute; inset: 0; background: rgba(60, 60, 80, 0.12); opacity: 0; transition: opacity .3s; }
+.pimg:hover::after { opacity: 1; }
+.phover { position: absolute; top: 50%; left: 50%; z-index: 1; display: flex; opacity: 0;
+  transform: translate(-50%, -50%) scale(.85); transition: opacity .3s, transform .3s; }
+.pimg:hover .phover { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.phover i { width: 46px; height: 46px; display: grid; place-items: center; background: #c9a18a; color: #fff;
+  border-right: 2px solid rgba(255,255,255,.4); }
+.phover b { padding: 0 28px; display: grid; place-items: center; background: #c9a18a; color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; }
+.pinfo { padding-top: 22px; }
+.pinfo h3 { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.pinfo h3 a { color: inherit; text-decoration: none; }
+.stars { color: #c9a18a; font-size: 12px; letter-spacing: 2px; margin-bottom: 4px; }
+.price { margin: 0; font-family: "Libre Baskerville", serif; font-size: 24px; color: #c9a18a; }
+.price small { font-size: 13px; margin-right: 4px; }

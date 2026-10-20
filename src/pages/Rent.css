@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap");
+
+:where(.rent-container),
+:where(.rent-container) * { box-sizing: border-box; margin: 0; padding: 0; }
+:where(.rent-container) a { color: inherit; text-decoration: none; }
+
+.rent-container {
+  --font-heading: "Libre Baskerville", Georgia, serif;
+  --font-body: "Poppins", sans-serif;
+  --beige: #cbb29a;
+  --cream: #fcfaf7;
+  --card-bg: #f0eee7;
+  --beige-btn: #c19c8d;
+  --beige-btn-hover: #ab8576;
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: #333;
+  background: var(--cream);
+}
+
+
+.rent-hero {
+  width: 80%;
+  height: 550px;
+  margin: 0 auto;
+  background: url("https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-15-1155x615.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-overlay h2 { font-family: var(--font-heading); font-size: 64px; font-weight: 400; line-height: 1.3; }
+.breadcrumb { margin-top: 18px; font-size: 13px; letter-spacing: 2px; }
+.breadcrumb span { padding: 0 7px; color: var(--beige); }
+
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 25px;
+  padding: 55px 6%;
+  background: var(--cream);
+  border-bottom: 1px solid #eee8df;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding-left: 10%;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.stats-section.seen .stat-card { opacity: 1; transform: none; }
+.stat-icon-wrapper { flex-shrink: 0; width: 56px; display: flex; align-items: center; justify-content: center; color: var(--beige); }
+.stat-text-wrapper { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.stat-number { font-family: var(--font-heading); font-size: 32px; line-height: 1.1; color: #4f4f4f; font-variant-numeric: tabular-nums; min-width: 4ch; }
+.stat-label { font-size: 10px; line-height: 1.6; letter-spacing: 1px; font-weight: 500; text-transform: uppercase; color: var(--beige); }
+
+
+.occasions-section { padding: 80px 10%; text-align: center; }
+.section-header { text-align: left; margin-bottom: 35px; }
+.sub-title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: var(--beige); }
+.sub-title::before { content: ""; width: 40px; height: 1px; background: var(--beige); }
+.main-title { margin-bottom: 60px; font-family: var(--font-heading); font-size: 40px; font-weight: 400; line-height: 1.3; }
+
+.occasions-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 250px; gap: 24px 28px; }
+.occasion-card { display: flex; flex-direction: column; min-width: 0; min-height: 0; height: 100%; overflow: hidden; background: var(--card-bg); grid-row: span 2; }
+.occasion-card:nth-child(1) { grid-column: 1; }
+.occasion-card:nth-child(2) { grid-column: 2 / span 2; flex-direction: row-reverse; }
+.occasion-card:nth-child(3) { grid-column: 1 / span 2; flex-direction: row; }
+.occasion-card:nth-child(4) { grid-column: 3; }
+.occasion-card:nth-child(5) { grid-column: 1; }
+.occasion-card:nth-child(6) { grid-column: 2 / span 2; flex-direction: row-reverse; }
+
+.occasion-media { position: relative; display: block; flex: 0 0 50%; min-width: 0; min-height: 0; overflow: hidden; }
+.occasion-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.occasion-media::after { content: ""; position: absolute; inset: 0; background: rgba(60, 60, 80, 0.45); opacity: 0; transition: opacity 0.3s ease; }
+.occasion-media:hover::after { opacity: 1; }
+.occasion-media:hover img { transform: scale(1.04); }
+.media-icon {
+  position: absolute; top: 50%; left: 50%; z-index: 1;
+  width: 54px; height: 54px; display: grid; place-items: center;
+  background: #f3bfa8; color: #fff;
+  opacity: 0; transform: translate(-50%, -50%) scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.occasion-media:hover .media-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+.occasion-info { flex: 1; min-width: 0; min-height: 0; padding: 25px 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: var(--card-bg); transition: background-color 0.4s ease; }
+.occasion-card:hover .occasion-info { background: #e2d2bf; }
+.occasion-info h3 { margin-bottom: 12px; font-family: var(--font-heading); font-size: 23px; font-weight: 400; color: #302d29; transition: color 0.3s ease; }
+.occasion-card:hover .occasion-info h3 { color: #8f7152; }
+.occasion-info p { max-width: 290px; margin-bottom: 20px; font-family: var(--font-heading); font-size: 13px; line-height: 1.8; color: #777168; }
+.learn-more { display: inline-flex; align-items: center; gap: 8px; padding: 5px; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; color: #b9a084; transition: color 0.3s ease; }
+.occasion-card:hover .learn-more { color: #8f7152; }
+.arrow-icon { transition: transform 0.3s ease; }
+.occasion-card:hover .arrow-icon { transform: translateX(5px); }
+
+
+.faq-section {
+  position: relative; display: flex; align-items: center; width: 100%; min-height: 700px;
+  overflow: hidden; isolation: isolate; color: #fff; background-color: #302735;
+  background-image:
+    linear-gradient(90deg, rgba(43,35,49,.98) 0%, rgba(43,35,49,.92) 35%, rgba(43,35,49,.68) 48%, rgba(43,35,49,.22) 68%, rgba(43,35,49,.04) 100%),
+    url("https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-7-1155x615.jpg");
+  background-size: cover; background-position: center right; background-repeat: no-repeat;
+}
+.faq-content { position: relative; z-index: 1; width: 58%; max-width: 760px; padding: 65px 0 65px 7%; }
+.faq-heading { margin-bottom: 28px; }
+.faq-eyebrow { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; color: #e0c4a4; }
+.faq-line { flex-shrink: 0; width: 42px; height: 1px; background: #d3b18e; }
+.faq-heading h2 { font-family: var(--font-heading); font-size: clamp(32px, 3.5vw, 46px); font-weight: 400; line-height: 1.25; color: #fff; }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,.2); transition: background-color 0.3s ease; }
+.faq-item.active { margin-bottom: 12px; background: rgba(255,255,255,.17); border-bottom-color: transparent; }
+.faq-question { width: 100%; min-height: 65px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; gap: 15px; border: 0; background: transparent; color: #fff; text-align: left; cursor: pointer; font-family: var(--font-heading); font-size: 15px; font-weight: 700; transition: color 0.3s ease; }
+.faq-question:hover { color: #e0c4a4; }
+.faq-arrow { flex-shrink: 0; font-family: Arial, sans-serif; font-size: 17px; line-height: 1; }
+.faq-answer { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.3s ease, opacity 0.25s ease; }
+.faq-answer-open { grid-template-rows: 1fr; opacity: 1; }
+.faq-answer-inner { min-height: 0; overflow: hidden; }
+.faq-answer-inner p { max-width: 450px; padding: 0 28px 25px; font-size: 12px; line-height: 1.9; color: #fff; }
+
+
+.dresses-section { width: 100%; padding: 90px 10%; background: var(--cream); }
+.dresses-header { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin-bottom: 70px; }
+.sub-title-wrapper { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.sub-title-line { width: 40px; height: 1px; background: var(--beige); }
+.dresses-sub-title { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; color: var(--beige); }
+.dresses-title { font-family: var(--font-heading); font-size: 44px; font-weight: 400; line-height: 1.2; color: #2f2d33; text-align: left; }
+.view-all-btn { flex-shrink: 0; padding: 22px 38px; background: var(--beige-btn); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 2px; transition: background-color 0.3s ease; }
+.view-all-btn:hover { background: var(--beige-btn-hover); }
+
+.dresses-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; align-items: start; }
+.dress-card { min-width: 0; text-align: center; }
+.dress-image-wrapper { position: relative; display: block; width: 100%; height: 430px; overflow: hidden; background: #ece9e1; }
+.dress-image-wrapper img { width: 100%; height: 100%; object-fit: contain; object-position: center; transition: transform 0.5s ease; }
+.dress-card:hover .dress-image-wrapper img { transform: scale(1.03); }
+.dress-hover-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.25); opacity: 0; transition: opacity 0.3s ease; }
+.dress-image-wrapper:hover .dress-hover-overlay { opacity: 1; }
+.hover-icon-link, .hover-rent-btn { height: 46px; display: flex; align-items: center; justify-content: center; background: var(--beige-btn); color: #fff; transition: background-color 0.3s ease; }
+.hover-icon-link { width: 46px; border-right: 2px solid rgba(255,255,255,.4); }
+.hover-rent-btn { padding: 0 24px; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; white-space: nowrap; }
+.dress-image-wrapper:hover .hover-icon-link,
+.dress-image-wrapper:hover .hover-rent-btn { background: var(--beige-btn-hover); }
+
+.dress-info { padding-top: 26px; }
+.dress-name { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: #3a3740; }
+.dress-name a:hover { color: var(--beige-btn); }
+.dress-rating { margin-top: 8px; font-size: 12px; letter-spacing: 2px; color: var(--beige-btn); }
+.dress-price { margin-top: 8px; font-family: var(--font-heading); font-size: 13px; color: var(--beige-btn); }
+.dress-price span { margin-left: 2px; font-size: 24px; }
+
+
+.newsletter-section { width: 100%; padding: 90px 10% 100px; background: var(--cream); text-align: center; }
+.newsletter-title { margin-bottom: 45px; font-family: var(--font-heading); font-size: 44px; font-weight: 400; line-height: 1.2; color: #2f2d33; }
+.newsletter-form { display: flex; align-items: stretch; max-width: 780px; margin: 0 auto; }
+.newsletter-input { flex: 1; min-width: 0; padding: 24px 28px; border: 0; outline: 0; background: #f1efe9; color: #333; font-family: var(--font-body); font-size: 14px; }
+.newsletter-input::placeholder { color: #8a8680; }
+.newsletter-input:focus { background: #ebe8e0; }
+.newsletter-btn { flex-shrink: 0; padding: 0 48px; border: 0; background: var(--beige-btn); color: #fff; font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 2px; cursor: pointer; transition: background-color 0.3s ease; }
+.newsletter-btn:hover { background: var(--beige-btn-hover); }
+.newsletter-thanks { margin-top: 20px; font-size: 14px; font-weight: 500; color: var(--beige-btn); }
+
+
+.site-footer { width: 100%; padding: 80px 10% 90px; background: #36313d; color: #fff; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 50px; }
+.footer-col h3 { margin-bottom: 35px; font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: #e8c4a4; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 14px; }
+.footer-col a { color: #fff; font-size: 14px; transition: color 0.3s ease; }
+.footer-col a:hover { color: #e8c4a4; }
+.footer-socials { display: flex; flex-wrap: wrap; gap: 14px; }
+.footer-col .social-circle { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.12); color: #e8c4a4; font-size: 13px; font-weight: 600; transition: background-color 0.3s ease, color 0.3s ease; }
+.footer-col .social-circle:hover { background: #e8c4a4; color: #36313d; }
+
+
+.chat-widget { position: fixed; right: 25px; bottom: 25px; z-index: 1000; display: flex; align-items: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 30px; background: #7bc043; color: #fff; font-family: var(--font-body); font-size: 13px; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,.15); cursor: pointer; transition: transform 0.2s ease, background-color 0.2s ease; }
+.chat-widget:hover { transform: translateY(-3px); background: #6eb238; }
+
+
+@media (max-width: 1024px) {
+  .dresses-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dresses-title { font-size: 36px; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .rent-hero { width: 90%; height: 450px; }
+  .hero-overlay h2 { font-size: 48px; }
+  .stats-section { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 15px; padding: 45px 5%; }
+  .stat-card { gap: 10px; padding-left: 0; }
+  .stat-number { font-size: 26px; }
+  .stat-icon-wrapper { width: 40px; }
+  .occasions-section { padding: 55px 5%; }
+  .main-title { margin-bottom: 45px; }
+  .occasions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 18px; }
+  .occasion-card:nth-child(n) { grid-column: auto; flex-direction: column; }
+  .occasion-media { flex: none; height: 260px; }
+  .occasion-info { padding: 22px 15px; }
+  .occasion-info h3 { font-size: 20px; }
+  .faq-section { min-height: 620px; background-position: 60% center; }
+  .faq-content { width: 68%; padding-left: 5%; }
+  .faq-heading h2 { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .rent-hero { width: 94%; height: 350px; }
+  .hero-overlay h2 { font-size: 36px; }
+  .breadcrumb { margin-top: 12px; font-size: 10px; letter-spacing: 1px; }
+  .stats-section { padding: 35px 5%; gap: 25px 12px; }
+  .stat-icon-wrapper { width: 30px; }
+  .stat-number { font-size: 22px; }
+  .stat-label { font-size: 8px; letter-spacing: 0.3px; }
+  .occasions-section { padding: 45px 5%; }
+  .main-title { margin-bottom: 35px; font-size: 30px; }
+  .occasions-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; gap: 24px; }
+  .occasion-card:nth-child(n) { grid-row: auto; height: auto; }
+  .occasion-media { height: 280px; }
+  .occasion-info { min-height: 190px; padding: 28px 22px; }
+  .occasion-info h3 { font-size: 22px; }
+  .faq-section {
+    min-height: 620px;
+    background-image:
+      linear-gradient(90deg, rgba(43,35,49,.93) 0%, rgba(43,35,49,.8) 55%, rgba(43,35,49,.48) 100%),
+      url("https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-7-1155x615.jpg");
+    background-position: 63% center;
+  }
+  .faq-content { width: 100%; max-width: none; padding: 45px 20px; }
+  .faq-heading h2 { font-size: 30px; line-height: 1.35; }
+  .faq-question { min-height: 62px; padding: 18px 16px; font-size: 13px; }
+  .faq-answer-inner p { padding: 0 16px 22px; }
+  .dresses-section { padding: 50px 5%; }
+  .dresses-header { flex-direction: column; align-items: flex-start; gap: 25px; margin-bottom: 40px; }
+  .dresses-grid { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  .dress-image-wrapper { height: 400px; }
+  .dresses-title { font-size: 30px; }
+  .view-all-btn { padding: 18px 30px; }
+  .newsletter-section { padding: 55px 5% 60px; }
+  .newsletter-title { margin-bottom: 30px; font-size: 30px; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-btn { padding: 20px; }
+  .site-footer { padding: 50px 5% 60px; }
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .chat-widget { right: 15px; bottom: 16px; padding: 10px 15px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card { opacity: 1; transform: none; transition: none; }
+  .occasion-media img, .dress-image-wrapper img { transition: none; }
+}

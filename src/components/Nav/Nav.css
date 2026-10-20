@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --nav-bg: #f4f1ee;
+  --nav-text: #2b2b2b;
+  --nav-accent: #c4967f;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 120px;
+  background-color: var(--nav-bg);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: var(--nav-text);
+  line-height: 1;
+}
+
+.logo-main {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.logo-sub {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: -8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--nav-accent);
+}
+
+.logo-sub i {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--nav-accent);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.menu a.accent {
+  color: var(--nav-accent);
+  opacity: 0.85;
+}
+
+.menu a:hover {
+  color: var(--nav-accent);
+  opacity: 1;
+}
+
+.paputu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--nav-text);
+}
+
+.paputu button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.paputu button:hover {
+  color: var(--nav-accent);
+}
+
+.paputu button:focus-visible {
+  outline: 1px solid var(--nav-accent);
+  outline-offset: 4px;
+}
+
+.signin {
+  color: var(--nav-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.signin:hover {
+  color: var(--nav-accent);
+}
+
+.bag {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--nav-accent);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paputu > button:last-child {
+  color: var(--nav-accent);
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    gap: 26px;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    height: auto;
+    padding: 20px 25px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .menu {
+    gap: 18px;
+    flex-wrap: wrap;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+
+  .logo-main {
+    font-size: 44px;
+  }
+
+  .paputu {
+    gap: 18px;
+  }
+}
