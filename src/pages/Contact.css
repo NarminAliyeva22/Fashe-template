@@ -31,23 +31,27 @@ body {
   justify-content: center;
 }
 
-.hero-overlay {
+
+.contact-hero-overlay {
   text-align: center;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(40, 32, 30, 0.55);
   padding: 45px 80px;
   backdrop-filter: blur(3px);
 }
 
-.hero-overlay h1 {
+ 
+.contact-hero-overlay h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 64px;
   font-weight: 400;
-  color: #ffff;
+  color: #ffffff;
   letter-spacing: 2px;
   line-height: 1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
-.hero-overlay .breadcrumb {
+
+.contact-hero-overlay .breadcrumb {
   font-family: 'Jost', sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
@@ -308,7 +312,8 @@ body {
     height: 320px;
   }
 
-  .hero-overlay h1 {
+  
+  .contact-hero-overlay h1 {
     font-size: 44px;
   }
 

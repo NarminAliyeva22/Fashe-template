@@ -38,14 +38,14 @@
   padding: 20px;
   text-align: center;
   color: #fff;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(40, 32, 30, 0.5); /* DƏYİŞDİ: əvvəl rgba(0, 0, 0, 0.25) idi */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.hero-overlay h2 { font-family: var(--font-heading); font-size: 64px; font-weight: 400; line-height: 1.3; }
-.breadcrumb { margin-top: 18px; font-size: 13px; letter-spacing: 2px; }
+.hero-overlay h2 { font-family: var(--font-heading); font-size: 64px; font-weight: 400; line-height: 1.3; text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35); } /* DƏYİŞDİ: text-shadow əlavə olundu */
+.breadcrumb { margin-top: 18px; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4); } /* DƏYİŞDİ: font-weight və text-shadow əlavə olundu */
 .breadcrumb span { padding: 0 7px; color: var(--beige); }
 
 

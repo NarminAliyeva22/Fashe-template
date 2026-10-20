@@ -2,16 +2,12 @@ import { ACCESSORIES } from "./occasionsData";
 
 const IMG = "https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/";
 
-/* ---------- 1) HOME SLIDER (3 slayd) ----------
-   Şəkilləri öz şəkillərinizlə əvəz edin (template preview-da şəklin üstündə
-   sağ klik -> "Open image in new tab" -> ünvanı bura yapışdırın). */
 export const HERO_SLIDES = [
   { id: 1, image: "https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-2-1155x615.jpg" , eyebrow: "FOR ANY OCCASION", title: "Rent Some Style", button: "FIND YOUR DRESS", to: "/find" },
   { id: 2, image: "https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-10-1155x615.jpg", eyebrow: "BEAUTIFUL ACCESSORIES", title: "Complete Your Look", button: "SEE ACCESSORIES", to: "/services/accessories" },
   { id: 3, image: "https://your-dress.ancorathemes.com/wp-content/uploads/2017/03/image-3-1155x615.jpg", eyebrow: "ASK A STYLIST", title: "Look Great Every Day", button: "CONTACT US", to: "/contact" },
 ];
 
-/* ---------- 2) PALTARLAR (Rent.jsx ilə eyni) ---------- */
 export const DRESSES = [
   { id: 1, name: "Occasion Dress", price: 120, image: `${IMG}img12_01.jpg` },
   { id: 2, name: "White Dress", price: 90, image: `${IMG}img01_02.jpg` },

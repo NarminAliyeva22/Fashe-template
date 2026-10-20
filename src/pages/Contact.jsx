@@ -31,7 +31,7 @@ const Contact = () => {
     <div className="contact-page">
      
       <section className="contact-hero">
-        <div className="hero-overlay">
+        <div className="contact-hero-overlay">
           <h1>Contacts</h1>
           <p className="breadcrumb">HOME | CONTACTS</p>
         </div>

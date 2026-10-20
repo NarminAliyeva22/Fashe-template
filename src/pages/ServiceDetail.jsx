@@ -32,10 +32,11 @@ export default function ServiceDetail() {
 
   return (
     <div className="rent-container">
+      {/* DƏYİŞDİ: overlay və kölgə birbaşa burada verilib */}
       <section className="rent-hero" style={{ backgroundImage: `url(${BANNER})` }}>
-        <div className="hero-overlay">
-          <h2>{service.title}</h2>
-          <div className="breadcrumb">
+        <div className="hero-overlay" style={{ background: "rgba(40, 32, 30, 0.6)" }}>
+          <h2 style={{ color: "#fff", textShadow: "0 2px 20px rgba(0, 0, 0, 0.5)" }}>{service.title}</h2>
+          <div className="breadcrumb" style={{ color: "#fff", fontWeight: 500, textShadow: "0 1px 8px rgba(0, 0, 0, 0.5)" }}>
             <Link to="/">HOME</Link> <span>|</span> <Link to="/">ALL SERVICES</Link> <span>|</span> {service.title.toUpperCase()}
           </div>
         </div>

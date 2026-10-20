@@ -33,6 +33,7 @@ nav {
   text-decoration: none;
   color: var(--nav-text);
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .logo-main {
@@ -151,39 +152,161 @@ nav {
   color: var(--nav-accent);
 }
 
-@media (max-width: 1200px) {
-  .menu {
-    gap: 26px;
-  }
+.mobile-menu-btn {
+  display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1280px) {
   nav {
-    height: auto;
-    padding: 20px 25px;
-    flex-wrap: wrap;
+    padding: 0 30px;
     gap: 20px;
   }
 
   .menu {
-    gap: 18px;
-    flex-wrap: wrap;
-    order: 3;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  nav {
-    justify-content: center;
+    gap: 24px;
   }
 
-  .logo-main {
-    font-size: 44px;
+  .menu a {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 
   .paputu {
+    gap: 20px;
+  }
+
+  .logo-main {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    height: auto;
+    min-height: 75px;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .logo {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .paputu {
+    order: 2;
     gap: 18px;
+  }
+
+  .mobile-menu-btn {
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    color: var(--nav-text);
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 10px;
+    padding: 4px 0 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+  }
+
+  .menu.menu-open {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 15px 4px;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .menu a:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 14px;
+    min-height: 68px;
+  }
+
+  .logo-main {
+    font-size: 38px;
+  }
+
+  .logo-sub {
+    font-size: 9px;
+    gap: 4px;
+    letter-spacing: 1.5px;
+    margin-top: -6px;
+  }
+
+  .logo-sub i {
+    width: 15px;
+  }
+
+  .paputu {
+    gap: 12px;
+  }
+
+  .paputu .signin {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+  }
+
+  .paputu svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile-menu-btn {
+    margin-left: 10px;
+  }
+
+  .mobile-menu-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  nav {
+    padding: 8px 10px;
+  }
+
+  .logo-main {
+    font-size: 32px;
+  }
+
+  .paputu {
+    gap: 9px;
+  }
+
+  .paputu .signin {
+    font-size: 9px;
+  }
+
+  .mobile-menu-btn {
+    margin-left: 6px;
   }
 }

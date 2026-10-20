@@ -51,7 +51,7 @@ function HeroSlider() {
   );
 }
 
-/* ---------- Ask a stylist ---------- */
+
 function StylistSection() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
